@@ -9,26 +9,34 @@ import Foundation
 import Moya
 
 enum MovieAPI {
-    case getMovie
+    case getMovies
+    case searchMovies(query: String)
 }
 
 extension MovieAPI: BaseAPI {
     var path: String {
         switch self {
-        case .getMovie:
+        case .getMovies:
             return "movie/now_playing"
+        case .searchMovies:
+            return "search/movie"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getMovie:
+        case .getMovies, .searchMovies:
             return .get
         }
     }
     
     var task: Task {
-        let param = baseParam
+        var param = baseParam
+        switch self {
+        case .searchMovies(let query):
+            param["query"] = query
+        case .getMovies: break
+        }
         return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
     }
 }

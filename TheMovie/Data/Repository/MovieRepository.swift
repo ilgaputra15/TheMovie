@@ -9,8 +9,8 @@ import Foundation
 import RxSwift
 
 protocol MovieRepositoryProtocol {
-
-  func getMovies() -> Observable<MoviesPageModel>
+    func getMovies() -> Observable<MoviesPageModel>
+    func searchMovies(by query: String) -> Observable<MoviesPageModel>
 
 }
 
@@ -31,8 +31,11 @@ final class MovieRepository: NSObject {
 }
 
 extension MovieRepository: MovieRepositoryProtocol {
-
-  func getMovies() -> Observable<MoviesPageModel> {
-    return remote.getMovies().map { $0.toDomain() }
-  }
+    func getMovies() -> Observable<MoviesPageModel> {
+        return remote.getMovies().map { $0.toDomain() }
+    }
+    
+    func searchMovies(by query: String) -> Observable<MoviesPageModel> {
+        return remote.searchMovies(by: query).map { $0.toDomain() }
+    }
 }

@@ -10,7 +10,8 @@ import RxSwift
 import Moya
 
 protocol RemoteDataSourceProtocol: class {
-  func getMovies() -> Observable<MoviesResponse>
+    func getMovies() -> Observable<MoviesResponse>
+    func searchMovies(by query: String) -> Observable<MoviesResponse>
 }
 
 final class RemoteDataSource: NSObject {
@@ -21,10 +22,15 @@ final class RemoteDataSource: NSObject {
 }
 
 extension RemoteDataSource: RemoteDataSourceProtocol {
-
-  func getMovies() -> Observable<MoviesResponse> {
-    return self.provider.rx.request(.getMovie, MoviesResponse.self)
-  }
+    func getMovies() -> Observable<MoviesResponse> {
+        return self.provider.rx.request(.getMovies, MoviesResponse.self)
+    }
+    
+    func searchMovies(by query: String) -> Observable<MoviesResponse> {
+        return self.provider.rx.request(.searchMovies(query: query), MoviesResponse.self)
+    }
+    
+    
 }
 
 

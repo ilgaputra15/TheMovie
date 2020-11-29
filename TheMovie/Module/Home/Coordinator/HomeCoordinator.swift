@@ -9,21 +9,12 @@ import UIKit
 
 class HomeCoordinator: BaseCoordinator {
     
-    let window: UIWindow
-    
-    init(window: UIWindow) {
-        self.window = window
-    }
-    
-    override func start() {
+    func create() -> UIViewController {
         let inject = Injection.init().provideMovieUseCase()
         let viewModel = HomeViewModel(homeUseCase: inject, disposeBag: disposeBag)
         let viewController = HomeViewController()
         viewController.disposeBag = disposeBag
-        viewController.viewModel = viewModel
-        
-        
-        window.rootViewController = viewController
-        window.makeKeyAndVisible()
+        viewController.viewModel = viewModel        
+        return viewController
     }
 }

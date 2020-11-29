@@ -16,7 +16,7 @@ class AppCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        let coordinator = HomeCoordinator(window: window)
+        let coordinator = DashboardCoordinator(window: window)
         coordinator.start()
     }
 }
