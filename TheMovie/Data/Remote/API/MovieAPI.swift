@@ -11,6 +11,7 @@ import Moya
 enum MovieAPI {
     case getMovies
     case searchMovies(query: String)
+    case getMovie(movieId: Int)
 }
 
 extension MovieAPI: BaseAPI {
@@ -20,12 +21,14 @@ extension MovieAPI: BaseAPI {
             return "movie/now_playing"
         case .searchMovies:
             return "search/movie"
+        case .getMovie(let id):
+            return "movie/\(id)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getMovies, .searchMovies:
+        case .getMovies, .searchMovies, .getMovie:
             return .get
         }
     }
@@ -35,7 +38,7 @@ extension MovieAPI: BaseAPI {
         switch self {
         case .searchMovies(let query):
             param["query"] = query
-        case .getMovies: break
+        case .getMovies, .getMovie: break
         }
         return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
     }

@@ -19,6 +19,7 @@ class SearchViewModel: BaseViewModel {
     let isLoading = PublishRelay<Bool>()
     let isFirstLoading = BehaviorRelay<Bool>(value: true)
     let search = BehaviorRelay<String>(value: "")
+    let navToDetail = PublishRelay<MovieModel>()
     
     init(homeUseCase: MovieUseCase, disposeBag: DisposeBag) {
         self.movieUseCase = homeUseCase

@@ -11,6 +11,7 @@ import RxSwift
 protocol MovieRepositoryProtocol {
     func getMovies() -> Observable<MoviesPageModel>
     func searchMovies(by query: String) -> Observable<MoviesPageModel>
+    func getMovie(by movieId: Int) -> Observable<MovieDetailModel>
 
 }
 
@@ -37,5 +38,9 @@ extension MovieRepository: MovieRepositoryProtocol {
     
     func searchMovies(by query: String) -> Observable<MoviesPageModel> {
         return remote.searchMovies(by: query).map { $0.toDomain() }
+    }
+    
+    func getMovie(by movieId: Int) -> Observable<MovieDetailModel> {
+        return remote.getMovie(by: movieId).map {$0.toDomain()}
     }
 }

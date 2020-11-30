@@ -21,9 +21,9 @@ class HomeViewController: BaseViewController {
     }
     
     func setupView() {
-        
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
         collectionView.register(UINib(nibName: "MovieViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieViewCell")
+        collectionView.rx.modelSelected(MovieModel.self).bind(to: viewModel.navToDetail).disposed(by: disposeBag)
     }
     
     func setupBinding() {

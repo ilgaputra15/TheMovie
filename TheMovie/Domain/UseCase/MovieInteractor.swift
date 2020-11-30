@@ -11,6 +11,7 @@ import RxSwift
 protocol MovieUseCase {
     func getMovies() -> Observable<MoviesPageModel>
     func searchMovie(by query: String) -> Observable<MoviesPageModel>
+    func getMovie(by movieId: Int) -> Observable<MovieDetailModel>
 }
 
 class MovieInteractor: MovieUseCase {
@@ -27,6 +28,10 @@ class MovieInteractor: MovieUseCase {
     
     func searchMovie(by query: String) -> Observable<MoviesPageModel> {
         return repository.searchMovies(by: query)
+    }
+    
+    func getMovie(by movieId: Int) -> Observable<MovieDetailModel> {
+        return repository.getMovie(by: movieId)
     }
 
 }

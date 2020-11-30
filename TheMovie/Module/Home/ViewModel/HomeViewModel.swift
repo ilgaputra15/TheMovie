@@ -17,6 +17,7 @@ class HomeViewModel: BaseViewModel {
     let movies = PublishRelay<[MovieModel]>()
     let stateErrorView = PublishRelay<String>()
     let loading = PublishRelay<Bool>()
+    let navToDetail = PublishRelay<MovieModel>()
     
     init(homeUseCase: MovieUseCase, disposeBag: DisposeBag) {
         self.movieUseCase = homeUseCase

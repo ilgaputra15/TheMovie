@@ -12,6 +12,7 @@ import Moya
 protocol RemoteDataSourceProtocol: class {
     func getMovies() -> Observable<MoviesResponse>
     func searchMovies(by query: String) -> Observable<MoviesResponse>
+    func getMovie(by movieId: Int) -> Observable<MovieDetailResponse>
 }
 
 final class RemoteDataSource: NSObject {
@@ -28,6 +29,10 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
     
     func searchMovies(by query: String) -> Observable<MoviesResponse> {
         return self.provider.rx.request(.searchMovies(query: query), MoviesResponse.self)
+    }
+    
+    func getMovie(by movieId: Int) -> Observable<MovieDetailResponse> {
+        return self.provider.rx.request(.getMovie(movieId: movieId), MovieDetailResponse.self)
     }
     
     
