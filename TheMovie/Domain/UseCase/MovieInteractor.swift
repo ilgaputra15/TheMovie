@@ -14,6 +14,7 @@ protocol MovieUseCase {
     func getMovie(by movieId: Int) -> Observable<MovieDetailModel>
     func saveMovie(movie: MovieDetailModel) -> Observable<Bool>
     func deleteMovie(movieId: Int) -> Observable<Bool>
+    func getLocalMovies() -> Observable<[MovieModel]>
 }
 
 class MovieInteractor: MovieUseCase {
@@ -42,6 +43,10 @@ class MovieInteractor: MovieUseCase {
     
     func deleteMovie(movieId: Int) -> Observable<Bool> {
         return repository.deleteMovie(movieId: movieId)
+    }
+    
+    func getLocalMovies() -> Observable<[MovieModel]> {
+        return repository.getLocalMovies()
     }
 
 }

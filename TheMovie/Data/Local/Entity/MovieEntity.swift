@@ -44,5 +44,13 @@ extension MovieEntity {
         return array
         
     }
+    
+    func toMovieModelDomain() -> MovieModel {
+        return .init(
+            id: id,
+            title: title,
+            posterURL: posterPath,
+            overview: overview)
+    }
 }
 

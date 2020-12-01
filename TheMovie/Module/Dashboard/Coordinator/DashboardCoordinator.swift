@@ -26,7 +26,8 @@ class DashboardCoordinator: BaseCoordinator {
     func tabViewControllers(navigation: UINavigationController) -> [UIViewController] {
         let home = setupTab(vc: HomeCoordinator().create(navigation: navigation), imageName: UIImage(named: "Home"), tag: 1)
         let search = setupTab(vc: SearchCoordinator().create(navigation: navigation), imageName: UIImage(named: "Search"), tag: 2)
-        return [home, search]
+        let favorite = setupTab(vc: FavoriteCoodinator().create(navigation: navigation), imageName: UIImage(named: "Favorite"), tag: 3)
+        return [home, search, favorite]
         
     }
     

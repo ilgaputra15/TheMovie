@@ -40,10 +40,8 @@ extension MoviesResponse.MovieResponse {
         return .init(
             id: id,
             title: title,
-            posterPath: posterPath,
             posterURL: BuildConfig.imageURL.rawValue + (posterPath ?? ""),
-            overview: overview,
-            releaseDate: dateFormatter.date(from: releaseDate ?? "")
+            overview: overview
         )
     }
 }

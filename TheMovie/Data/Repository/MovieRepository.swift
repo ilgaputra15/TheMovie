@@ -14,6 +14,7 @@ protocol MovieRepositoryProtocol {
     func getMovie(by movieId: Int) -> Observable<MovieDetailModel>
     func saveMovie(movie: MovieDetailModel) -> Observable<Bool>
     func deleteMovie(movieId: Int) -> Observable<Bool>
+    func getLocalMovies() -> Observable<[MovieModel]>
 
 }
 
@@ -62,5 +63,9 @@ extension MovieRepository: MovieRepositoryProtocol {
     
     func deleteMovie(movieId: Int) -> Observable<Bool> {
         return local.deleteMovie(from: movieId)
+    }
+    
+    func getLocalMovies() -> Observable<[MovieModel]> {
+        return local.getMovies().map { $0.map {$0.toMovieModelDomain()} }
     }
 }

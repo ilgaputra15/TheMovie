@@ -16,9 +16,7 @@ struct MoviesPageModel: Equatable {
 struct MovieModel: Equatable {
     let id: Int
     let title: String?
-    let posterPath: String?
     let posterURL: String
     let overview: String?
-    let releaseDate: Date?
 }
 
