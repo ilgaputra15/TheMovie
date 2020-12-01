@@ -39,6 +39,7 @@ extension MovieDetailResponse {
     }
 
     struct MovieProductionResponse: Codable {
+        
         let name: String
     }
 }
@@ -51,9 +52,9 @@ extension MovieDetailResponse {
             posterPath: BuildConfig.imageURL.rawValue + (posterPath ?? ""),
             overview: overview,
             releaseDate: releaseDate?.formatDate(),
-            genres: genres?.map {$0.name},
-            language: language?.map {$0.name},
-            productions: productions?.map {$0.name},
+            genres: genres?.map {$0.name} ?? [String](),
+            language: language?.map {$0.name} ?? [String](),
+            productions: productions?.map {$0.name} ?? [String](),
             year: releaseDate?.formatyear())
     }
 }

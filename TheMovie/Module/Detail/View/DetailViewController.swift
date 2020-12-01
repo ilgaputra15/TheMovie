@@ -29,7 +29,9 @@ class DetailViewController: BaseViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         setupBinding()
         setupView()
+        viewModel.getDetail()
     }
+    
     override func viewDidLayoutSubviews() {
         imageWidth.constant = view.frame.width / 2.5
     }
@@ -38,6 +40,15 @@ class DetailViewController: BaseViewController {
         imageView.layer.masksToBounds = false
         imageView.layer.cornerRadius = 6
         imageView.clipsToBounds = true
+    }
+    
+    func setButtonBar(isFavorite: Bool) {
+        let image = isFavorite ? UIImage(named: "Favorite Active") : UIImage(named: "Favorite Unactive")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(updateButton))
+    }
+    
+    @objc func updateButton() {
+        viewModel.saveFavorite.accept(())
     }
     
     func setupBinding() {
@@ -56,6 +67,10 @@ class DetailViewController: BaseViewController {
                 self?.errorAlert(message: error)
             }
         }).disposed(by: disposeBag)
+        viewModel.isFavorite.subscribe { (isFavorite) in
+            self.setButtonBar(isFavorite: isFavorite)
+        }.disposed(by: disposeBag)
+
     }
     
     func showMovieDetail(movie: MovieDetailModel) {
@@ -64,9 +79,9 @@ class DetailViewController: BaseViewController {
         labelTitle.text = movie.title
         labelYear.text = "(\(movie.year ?? ""))"
         labelReleaseDate.text = movie.releaseDate
-        labelGendre.text = movie.genres?.joined(separator: ", ") ?? "-"
-        labelLanguage.text = movie.language?.joined(separator: ", ") ?? "-"
-        labelProduction.text = movie.productions?.joined(separator: ", ") ?? "-"
+        labelGendre.text = movie.genres.count > 0 ? movie.genres.joined(separator: ", ") : "-"
+        labelLanguage.text = movie.language.count > 0 ? movie.language.joined(separator: ", ") : "-"
+        labelProduction.text = movie.productions.count > 0 ? movie.productions.joined(separator: ", ") : "-"
         labelOverview.text = movie.overview
     }
 

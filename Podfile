@@ -7,6 +7,7 @@ target 'TheMovie' do
   pod 'SwiftLint'
   pod 'RxCocoa', '5.1.1'
   pod 'Moya/RxSwift', '~> 14.0'
+  pod 'RealmSwift'
 
   # Pods for TheMovie
 

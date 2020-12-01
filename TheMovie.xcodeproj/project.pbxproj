@@ -21,6 +21,7 @@
 		E56AF95E256FCE9B007B5457 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56AF95D256FCE9B007B5457 /* HomeViewModel.swift */; };
 		E56AF961256FCF02007B5457 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56AF960256FCF02007B5457 /* BaseCoordinator.swift */; };
 		E56AF967256FD795007B5457 /* MovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56AF966256FD795007B5457 /* MovieInteractor.swift */; };
+		E56E38432576061E00071D93 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E38422576061E00071D93 /* Error.swift */; };
 		E577E65D256FFDDD006372D7 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577E65C256FFDDD006372D7 /* UIImageView.swift */; };
 		E577E67625720458006372D7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577E67425720458006372D7 /* SearchViewController.swift */; };
 		E577E67725720458006372D7 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E577E67525720458006372D7 /* SearchViewController.xib */; };
@@ -28,6 +29,8 @@
 		E577E67F25720917006372D7 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577E67E25720917006372D7 /* SearchCoordinator.swift */; };
 		E5878BAF257253B000120BD5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5878BAD257253B000120BD5 /* DashboardViewController.swift */; };
 		E5878BB425725A8B00120BD5 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5878BB325725A8B00120BD5 /* DashboardCoordinator.swift */; };
+		E58B71A92575509A00AC2419 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B71A82575509A00AC2419 /* LocalDataSource.swift */; };
+		E58B71AE257554DD00AC2419 /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B71AD257554DD00AC2419 /* MovieEntity.swift */; };
 		E5B6504B2573B8410007E32B /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B6504A2573B8410007E32B /* DetailCoordinator.swift */; };
 		E5B6504F2573B8880007E32B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B6504E2573B8880007E32B /* DetailViewModel.swift */; };
 		E5B650532573B89B0007E32B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B650512573B89B0007E32B /* DetailViewController.swift */; };
@@ -65,6 +68,7 @@
 		E56AF95D256FCE9B007B5457 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E56AF960256FCF02007B5457 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		E56AF966256FD795007B5457 /* MovieInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInteractor.swift; sourceTree = "<group>"; };
+		E56E38422576061E00071D93 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		E577E65C256FFDDD006372D7 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		E577E67425720458006372D7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E577E67525720458006372D7 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		E577E67E25720917006372D7 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		E5878BAD257253B000120BD5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		E5878BB325725A8B00120BD5 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		E58B71A82575509A00AC2419 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		E58B71AD257554DD00AC2419 /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		E5B6504A2573B8410007E32B /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		E5B6504E2573B8880007E32B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E5B650512573B89B0007E32B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +192,23 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		E58B71A72575508600AC2419 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E58B71AC257554BA00AC2419 /* Entity */,
+				E58B71A82575509A00AC2419 /* LocalDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E58B71AC257554BA00AC2419 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E58B71AD257554DD00AC2419 /* MovieEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		E5B650462573B8150007E32B /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +321,7 @@
 		E5E25140256E504800F68D6C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E58B71A72575508600AC2419 /* Local */,
 				E5E25145256E51E100F68D6C /* Remote */,
 				E5E2514E256E57C500F68D6C /* Repository */,
 			);
@@ -406,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				E5E25157256E5C3600F68D6C /* BuildConfig.swift */,
+				E56E38422576061E00071D93 /* Error.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -581,12 +606,15 @@
 				E5878BAF257253B000120BD5 /* DashboardViewController.swift in Sources */,
 				E5E25168256EA51100F68D6C /* MoviesResponse + Mapper.swift in Sources */,
 				E5E25103256D471500F68D6C /* AppDelegate.swift in Sources */,
+				E58B71AE257554DD00AC2419 /* MovieEntity.swift in Sources */,
 				E51A902E256FEA4E00E81E0B /* AppCoordinator.swift in Sources */,
 				E5B6504F2573B8880007E32B /* DetailViewModel.swift in Sources */,
 				E5E25105256D471500F68D6C /* SceneDelegate.swift in Sources */,
 				E51A9024256FDBB000E81E0B /* Injection.swift in Sources */,
 				E56AF956256FBFB6007B5457 /* HomeViewController.swift in Sources */,
+				E58B71A92575509A00AC2419 /* LocalDataSource.swift in Sources */,
 				E51A9037256FF5D200E81E0B /* MovieViewCell.swift in Sources */,
+				E56E38432576061E00071D93 /* Error.swift in Sources */,
 				E5B650572573BF860007E32B /* MovieDetailResponse + Mapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
