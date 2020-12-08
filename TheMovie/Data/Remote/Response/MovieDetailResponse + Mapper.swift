@@ -11,7 +11,7 @@ struct MovieDetailResponse: Codable {
     private enum CodingKeys: String, CodingKey {
         case id
         case title
-        case posterPath = "poster_path"
+        case backdropPath = "backdrop_path"
         case overview
         case releaseDate = "release_date"
         case genres
@@ -20,7 +20,7 @@ struct MovieDetailResponse: Codable {
     }
     let id: Int
     let title: String?
-    let posterPath: String?
+    let backdropPath: String?
     let overview: String?
     let releaseDate: String?
     let genres: [MovieGenreResponse]?
@@ -39,7 +39,6 @@ extension MovieDetailResponse {
     }
 
     struct MovieProductionResponse: Codable {
-        
         let name: String
     }
 }
@@ -49,7 +48,7 @@ extension MovieDetailResponse {
         return .init(
             id: id,
             title: title,
-            posterPath: BuildConfig.imageURL.rawValue + (posterPath ?? ""),
+            posterPath: BuildConfig.imageURL.rawValue + (backdropPath ?? ""),
             overview: overview,
             releaseDate: releaseDate?.formatDate(),
             genres: genres?.map {$0.name} ?? [String](),

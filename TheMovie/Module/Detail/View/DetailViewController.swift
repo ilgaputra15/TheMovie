@@ -13,7 +13,6 @@ class DetailViewController: BaseViewController {
     
     @IBOutlet weak var viewMain: UIView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var imageWidth: NSLayoutConstraint!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelYear: UILabel!
     @IBOutlet weak var labelReleaseDate: UILabel!
@@ -28,18 +27,7 @@ class DetailViewController: BaseViewController {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         setupBinding()
-        setupView()
         viewModel.getDetail()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        imageWidth.constant = view.frame.width / 2.5
-    }
-    
-    func setupView() {
-        imageView.layer.masksToBounds = false
-        imageView.layer.cornerRadius = 6
-        imageView.clipsToBounds = true
     }
     
     func setButtonBar(isFavorite: Bool) {
