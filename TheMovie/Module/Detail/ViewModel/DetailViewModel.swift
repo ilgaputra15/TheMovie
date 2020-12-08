@@ -22,8 +22,7 @@ class DetailViewModel: BaseViewModel {
     let saveFavorite = PublishRelay<Void>()
     var movieData: MovieDetailModel?
     var id: Int?
-    
-    
+        
     init(homeUseCase: MovieUseCase, disposeBag: DisposeBag) {
         self.movieUseCase = homeUseCase
         self.disposeBag = disposeBag

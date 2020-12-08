@@ -38,18 +38,18 @@ class SearchViewController: BaseViewController {
             .distinctUntilChanged()
             .bind(to: viewModel.search).disposed(by: disposeBag)
         
-        viewModel.movies.bind(to: collectionView.rx.items(cellIdentifier: "MovieViewCell", cellType: MovieViewCell.self)) {row, movie, cell in
+        viewModel.movies.bind(to: collectionView.rx.items(cellIdentifier: "MovieViewCell", cellType: MovieViewCell.self)) { _, movie, cell in
             cell.setView(movie: movie)
         }.disposed(by: disposeBag)
         
-        viewModel.isLoading.map{!$0}.bind(to: loading.rx.isHidden).disposed(by: disposeBag)
-        viewModel.movies.map{!$0.isEmpty}.bind(to: noResultLabel.rx.isHidden).disposed(by: disposeBag)
+        viewModel.isLoading.map {!$0}.bind(to: loading.rx.isHidden).disposed(by: disposeBag)
+        viewModel.movies.map {!$0.isEmpty}.bind(to: noResultLabel.rx.isHidden).disposed(by: disposeBag)
         viewModel.stateErrorView.subscribe(onNext: {[weak self] error in
             self?.hideLoadingDialog {
                 self?.errorAlert(message: error)
             }
         }).disposed(by: disposeBag)
-        viewModel.isFirstLoading.map{!$0}.bind(to: descLabel.rx.isHidden).disposed(by: disposeBag)
+        viewModel.isFirstLoading.map {!$0}.bind(to: descLabel.rx.isHidden).disposed(by: disposeBag)
         
     }
 }

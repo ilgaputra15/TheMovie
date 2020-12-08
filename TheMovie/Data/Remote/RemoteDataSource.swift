@@ -34,8 +34,4 @@ extension RemoteDataSource: RemoteDataSourceProtocol {
     func getMovie(by movieId: Int) -> Observable<MovieDetailResponse> {
         return self.provider.rx.request(.getMovie(movieId: movieId), MovieDetailResponse.self)
     }
-    
-    
 }
-
-

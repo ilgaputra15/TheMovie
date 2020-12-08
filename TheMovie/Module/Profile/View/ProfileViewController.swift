@@ -22,7 +22,6 @@ class ProfileViewController: BaseViewController {
         imageView.clipsToBounds = true
     }
 
-
     /*
     // MARK: - Navigation
 

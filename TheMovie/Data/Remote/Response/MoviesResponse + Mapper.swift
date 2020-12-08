@@ -18,24 +18,22 @@ struct MoviesResponse: Codable {
     let movies: [MovieResponse]
 }
 
-extension MoviesResponse {
-    struct MovieResponse: Codable {
-        private enum CodingKeys: String, CodingKey {
-            case id
-            case title
-            case posterPath = "poster_path"
-            case overview
-            case releaseDate = "release_date"
-        }
-        let id: Int
-        let title: String?
-        let posterPath: String?
-        let overview: String?
-        let releaseDate: String?
+struct MovieResponse: Codable {
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case posterPath = "poster_path"
+        case overview
+        case releaseDate = "release_date"
     }
+    let id: Int
+    let title: String?
+    let posterPath: String?
+    let overview: String?
+    let releaseDate: String?
 }
 
-extension MoviesResponse.MovieResponse {
+extension MovieResponse {
     func toDomain() -> MovieModel {
         return .init(
             id: id,
@@ -45,7 +43,6 @@ extension MoviesResponse.MovieResponse {
         )
     }
 }
-
 
 extension MoviesResponse {
     func toDomain() -> MoviesPageModel {

@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 
-
 class DetailViewController: BaseViewController {
     
     @IBOutlet weak var viewMain: UIView!
@@ -32,7 +31,12 @@ class DetailViewController: BaseViewController {
     
     func setButtonBar(isFavorite: Bool) {
         let image = isFavorite ? UIImage(named: "Favorite Active") : UIImage(named: "Favorite Unactive")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(updateButton))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: image?.withRenderingMode(.alwaysOriginal),
+            style: .done,
+            target: self,
+            action: #selector(updateButton)
+        )
     }
     
     @objc func updateButton() {

@@ -65,4 +65,3 @@ public extension Reactive where Base: UIScrollView {
         return ControlEvent(events: source)
     }
 }
-

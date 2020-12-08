@@ -49,4 +49,3 @@ class BaseCoordinator: Coordinator {
     
     func didCloseView(_ animated: Bool = true) {}
 }
-

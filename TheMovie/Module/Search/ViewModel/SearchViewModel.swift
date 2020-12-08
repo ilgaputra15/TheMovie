@@ -30,7 +30,7 @@ class SearchViewModel: BaseViewModel {
     
     func setupBinding() {
         search
-            .filter{ $0 != ""}
+            .filter { $0 != "" }
             .flatMap { (query) -> Observable<MoviesPageModel> in
                 self.isFirstLoading.accept(false)
                 self.isLoading.accept(true)

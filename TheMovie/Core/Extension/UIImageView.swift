@@ -7,7 +7,7 @@
 
 import UIKit
 
-let imageCache = NSCache<NSString,UIImage>()
+let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     
@@ -20,7 +20,7 @@ extension UIImageView {
         
         self.contentMode = mode
         self.image = defaultImage
-        if let cacheImage = imageCache.object(forKey: url.absoluteString as NSString){
+        if let cacheImage = imageCache.object(forKey: url.absoluteString as NSString) {
             self.backgroundColor = UIColor.clear
             self.image = cacheImage
             view.isHidden = true
@@ -37,7 +37,7 @@ extension UIImageView {
                         return
                 }
                 imageCache.setObject(image, forKey: url.absoluteString as NSString)
-                DispatchQueue.main.async() {
+                DispatchQueue.main.async {
                     self.backgroundColor = UIColor.clear
                     self.contentMode = mode
                     self.image = image

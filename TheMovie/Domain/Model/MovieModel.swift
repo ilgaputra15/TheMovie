@@ -19,4 +19,3 @@ struct MovieModel: Equatable {
     let posterURL: String
     let overview: String?
 }
-
