@@ -42,18 +42,3 @@ extension MovieDetailResponse {
         let name: String
     }
 }
-
-extension MovieDetailResponse {
-    func toDomain() -> MovieDetailModel {
-        return .init(
-            id: id,
-            title: title,
-            posterPath: BuildConfig.imageURL.rawValue + (backdropPath ?? ""),
-            overview: overview,
-            releaseDate: releaseDate?.formatDate(),
-            genres: genres?.map {$0.name} ?? [String](),
-            language: language?.map {$0.name} ?? [String](),
-            productions: productions?.map {$0.name} ?? [String](),
-            year: releaseDate?.formatyear())
-    }
-}
