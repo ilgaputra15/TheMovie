@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8F6FC13C06BCE53EAD760E7A /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82483C15D7E58D76C6E2B583 /* Pods_Core.framework */; };
+		E50E7C6325C9692500709C47 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E7C6225C9692500709C47 /* DataSource.swift */; };
+		E5250E9825C94BEF0097CF53 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5250E9725C94BEF0097CF53 /* BaseAPI.swift */; };
+		E5250E9C25C94C700097CF53 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5250E9B25C94C700097CF53 /* BuildConfig.swift */; };
 		E52DDD7A25B3352500139DF0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52DDD7025B3352400139DF0 /* Core.framework */; };
 		E52DDD7F25B3352500139DF0 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDD7E25B3352500139DF0 /* CoreTests.swift */; };
 		E52DDD8125B3352500139DF0 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = E52DDD7325B3352400139DF0 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E52DDDB325B3371900139DF0 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDDB225B3371900139DF0 /* Repository.swift */; };
-		E52DDDDB25B33CE400139DF0 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDDDA25B33CE400139DF0 /* DataSource.swift */; };
+		E52DDDDB25B33CE400139DF0 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDDDA25B33CE400139DF0 /* LocalDataSource.swift */; };
 		E52DDDDF25B33D1700139DF0 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDDDE25B33D1700139DF0 /* UseCase.swift */; };
 		E52DDDE325B33D6200139DF0 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDDE225B33D6200139DF0 /* Interactor.swift */; };
 		E52DDDE825B3445900139DF0 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDDE725B3445900139DF0 /* Mapper.swift */; };
@@ -20,6 +23,9 @@
 		E52DDDF025B344C100139DF0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDDED25B344C100139DF0 /* Date.swift */; };
 		E52DDDF125B344C100139DF0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDDEE25B344C100139DF0 /* UIImageView.swift */; };
 		E52DDDF625B3451300139DF0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDDF525B3451300139DF0 /* Error.swift */; };
+		E52DDE6225B48DA600139DF0 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE5F25B48DA600139DF0 /* BaseCoordinator.swift */; };
+		E52DDE6325B48DA600139DF0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE6025B48DA600139DF0 /* BaseViewModel.swift */; };
+		E52DDE6425B48DA600139DF0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE6125B48DA600139DF0 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,9 @@
 /* Begin PBXFileReference section */
 		82483C15D7E58D76C6E2B583 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAED4FAF97240E2C4325056D /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
+		E50E7C6225C9692500709C47 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		E5250E9725C94BEF0097CF53 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		E5250E9B25C94C700097CF53 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 		E52DDD7025B3352400139DF0 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52DDD7325B3352400139DF0 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		E52DDD7425B3352400139DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,7 +51,7 @@
 		E52DDD7E25B3352500139DF0 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		E52DDD8025B3352500139DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E52DDDB225B3371900139DF0 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		E52DDDDA25B33CE400139DF0 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		E52DDDDA25B33CE400139DF0 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		E52DDDDE25B33D1700139DF0 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		E52DDDE225B33D6200139DF0 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		E52DDDE725B3445900139DF0 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -50,6 +59,9 @@
 		E52DDDED25B344C100139DF0 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E52DDDEE25B344C100139DF0 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		E52DDDF525B3451300139DF0 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		E52DDE5F25B48DA600139DF0 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		E52DDE6025B48DA600139DF0 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		E52DDE6125B48DA600139DF0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EFFA990FF90ECE0A216220F8 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +126,7 @@
 		E52DDD7225B3352400139DF0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E52DDE5C25B48D9600139DF0 /* Base */,
 				E52DDDF425B3450700139DF0 /* Constant */,
 				E52DDDEB25B3449200139DF0 /* Extension */,
 				E52DDDE625B3444D00139DF0 /* Mapper */,
@@ -138,7 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				E52DDDB225B3371900139DF0 /* Repository.swift */,
-				E52DDDDA25B33CE400139DF0 /* DataSource.swift */,
+				E52DDDDA25B33CE400139DF0 /* LocalDataSource.swift */,
+				E5250E9725C94BEF0097CF53 /* BaseAPI.swift */,
+				E50E7C6225C9692500709C47 /* DataSource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -174,8 +189,19 @@
 			isa = PBXGroup;
 			children = (
 				E52DDDF525B3451300139DF0 /* Error.swift */,
+				E5250E9B25C94C700097CF53 /* BuildConfig.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		E52DDE5C25B48D9600139DF0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E52DDE5F25B48DA600139DF0 /* BaseCoordinator.swift */,
+				E52DDE6025B48DA600139DF0 /* BaseViewModel.swift */,
+				E52DDE6125B48DA600139DF0 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,15 +339,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5250E9C25C94C700097CF53 /* BuildConfig.swift in Sources */,
 				E52DDDF125B344C100139DF0 /* UIImageView.swift in Sources */,
+				E52DDE6325B48DA600139DF0 /* BaseViewModel.swift in Sources */,
+				E50E7C6325C9692500709C47 /* DataSource.swift in Sources */,
 				E52DDDEF25B344C100139DF0 /* Reactive.swift in Sources */,
 				E52DDDDF25B33D1700139DF0 /* UseCase.swift in Sources */,
 				E52DDDF025B344C100139DF0 /* Date.swift in Sources */,
-				E52DDDDB25B33CE400139DF0 /* DataSource.swift in Sources */,
+				E52DDE6425B48DA600139DF0 /* BaseViewController.swift in Sources */,
+				E52DDDDB25B33CE400139DF0 /* LocalDataSource.swift in Sources */,
+				E52DDE6225B48DA600139DF0 /* BaseCoordinator.swift in Sources */,
 				E52DDDE325B33D6200139DF0 /* Interactor.swift in Sources */,
 				E52DDDB325B3371900139DF0 /* Repository.swift in Sources */,
 				E52DDDF625B3451300139DF0 /* Error.swift in Sources */,
 				E52DDDE825B3445900139DF0 /* Mapper.swift in Sources */,
+				E5250E9825C94BEF0097CF53 /* BaseAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -454,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

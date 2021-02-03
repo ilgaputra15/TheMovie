@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Home
 
 class DashboardCoordinator: BaseCoordinator {
     

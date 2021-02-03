@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCoordinator: BaseCoordinator {
+class HomeCoordinatsorr: BaseCoordinator {
     
     func create(navigation: UINavigationController) -> UIViewController {
         let inject = Injection.init().provideMovieUseCase()

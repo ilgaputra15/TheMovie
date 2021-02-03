@@ -24,3 +24,10 @@ target 'Core' do
   pod 'Moya/RxSwift', '~> 14.0'
 end
 
+target 'Home' do
+  project 'Home/Home.project'
+  use_frameworks!
+  pod 'RxCocoa', '5.1.1'
+  pod 'Moya/RxSwift', '~> 14.0'
+end
+

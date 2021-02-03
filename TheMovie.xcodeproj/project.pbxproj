@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		77E8F69C510F460735C8E8E9 /* Pods_TheMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96ADC7379BB9BF99C869C865 /* Pods_TheMovie.framework */; };
+		E50E7C6E25C9785600709C47 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50E7C6D25C9785600709C47 /* Home.framework */; };
+		E50E7C6F25C9785600709C47 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E50E7C6D25C9785600709C47 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E50E7C7225C978C700709C47 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50E7C7125C978C700709C47 /* Core.framework */; };
+		E50E7C7325C978C700709C47 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E50E7C7125C978C700709C47 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E51A9024256FDBB000E81E0B /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A9023256FDBB000E81E0B /* Injection.swift */; };
 		E51A9028256FDFE100E81E0B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A9027256FDFE100E81E0B /* BaseViewModel.swift */; };
 		E51A902B256FDFEF00E81E0B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51A902A256FDFEF00E81E0B /* BaseViewController.swift */; };
@@ -60,9 +64,26 @@
 		E5E2516E256F505100F68D6C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2516D256F505100F68D6C /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E50E7C7025C9785600709C47 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E50E7C6F25C9785600709C47 /* Home.framework in Embed Frameworks */,
+				E50E7C7325C978C700709C47 /* Core.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		49A5DF8C99CE3DBD956E4F81 /* Pods-TheMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovie.release.xcconfig"; path = "Target Support Files/Pods-TheMovie/Pods-TheMovie.release.xcconfig"; sourceTree = "<group>"; };
 		96ADC7379BB9BF99C869C865 /* Pods_TheMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50E7C6D25C9785600709C47 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50E7C7125C978C700709C47 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51A9023256FDBB000E81E0B /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		E51A9027256FDFE100E81E0B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		E51A902A256FDFEF00E81E0B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E8F69C510F460735C8E8E9 /* Pods_TheMovie.framework in Frameworks */,
+				E50E7C7225C978C700709C47 /* Core.framework in Frameworks */,
+				E50E7C6E25C9785600709C47 /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +156,8 @@
 		3BB40B95057DD7BF84140925 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E50E7C7125C978C700709C47 /* Core.framework */,
+				E50E7C6D25C9785600709C47 /* Home.framework */,
 				96ADC7379BB9BF99C869C865 /* Pods_TheMovie.framework */,
 			);
 			name = Frameworks;
@@ -573,6 +598,7 @@
 				E5E250FD256D471500F68D6C /* Resources */,
 				E5E4F7D8257FCA5B00D9B38C /* Swiftlint Check Script */,
 				01B8AEE22A7A7D92F2CAFDDA /* [CP] Embed Pods Frameworks */,
+				E50E7C7025C9785600709C47 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

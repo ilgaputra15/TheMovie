@@ -2,18 +2,15 @@
 //  DataSource.swift
 //  Core
 //
-//  Created by Ilga Putra on 16/01/21.
+//  Created by Ilga Putra on 02/02/21.
 //
 
 import Foundation
 import RxSwift
 
-public protocol LocaleDataSource {
+public protocol DataSource {
     associatedtype Request
     associatedtype Response
     
-    func getMovies() -> Observable<[Response]>
-    func addMovie(from movie: Request) -> Observable<Bool>
-    func deleteMovie(from movieId: Int) -> Observable<Bool>
-    func getMovie(from movieId: Int) -> Observable<Response?>
+    func execute(request: Request?) -> Observable<Response>
 }
