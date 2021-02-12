@@ -24,8 +24,8 @@ extension MovieDetailResponse {
 }
 
 extension MovieDetailModel {
-    func toEntity() -> MovieDetailEntity {
-        let entity = MovieDetailEntity()
+    func toEntity() -> MovieLocalEntity {
+        let entity = MovieLocalEntity()
         entity.id = id
         entity.title = title ?? ""
         entity.posterPath = posterPath ?? ""
@@ -36,5 +36,21 @@ extension MovieDetailModel {
         entity.productions.append(objectsIn: productions)
         entity.year = year ?? ""
         return entity
+    }
+}
+
+extension MovieLocalEntity {
+    func toDomain() -> MovieDetailModel {
+        return .init(
+            isFromLocal: true,
+            id: id,
+            title: title,
+            posterPath: posterPath,
+            overview: overview,
+            releaseDate: releaseDate,
+            genres: toArrayString(from: genres),
+            language: toArrayString(from: language),
+            productions: toArrayString(from: productions),
+            year: year)
     }
 }

@@ -8,7 +8,6 @@
 import Foundation
 import RxSwift
 
-
 public protocol Repository {
     associatedtype Request
     associatedtype Response

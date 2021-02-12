@@ -26,6 +26,7 @@
 		E52DDE6225B48DA600139DF0 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE5F25B48DA600139DF0 /* BaseCoordinator.swift */; };
 		E52DDE6325B48DA600139DF0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE6025B48DA600139DF0 /* BaseViewModel.swift */; };
 		E52DDE6425B48DA600139DF0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE6125B48DA600139DF0 /* BaseViewController.swift */; };
+		E57D142925D6CEA8009D1493 /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D142825D6CEA8009D1493 /* MovieEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		E52DDE5F25B48DA600139DF0 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		E52DDE6025B48DA600139DF0 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		E52DDE6125B48DA600139DF0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E57D142825D6CEA8009D1493 /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		EFFA990FF90ECE0A216220F8 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 		E52DDDAE25B336B400139DF0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E57D142725D6CE90009D1493 /* Local */,
 				E52DDDB225B3371900139DF0 /* Repository.swift */,
 				E52DDDDA25B33CE400139DF0 /* LocalDataSource.swift */,
 				E5250E9725C94BEF0097CF53 /* BaseAPI.swift */,
@@ -202,6 +205,14 @@
 				E52DDE6125B48DA600139DF0 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		E57D142725D6CE90009D1493 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E57D142825D6CEA8009D1493 /* MovieEntity.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 				E52DDDF025B344C100139DF0 /* Date.swift in Sources */,
 				E52DDE6425B48DA600139DF0 /* BaseViewController.swift in Sources */,
 				E52DDDDB25B33CE400139DF0 /* LocalDataSource.swift in Sources */,
+				E57D142925D6CEA8009D1493 /* MovieEntity.swift in Sources */,
 				E52DDE6225B48DA600139DF0 /* BaseCoordinator.swift in Sources */,
 				E52DDDE325B33D6200139DF0 /* Interactor.swift in Sources */,
 				E52DDDB325B3371900139DF0 /* Repository.swift in Sources */,

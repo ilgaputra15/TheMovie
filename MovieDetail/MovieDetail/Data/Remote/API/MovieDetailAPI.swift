@@ -36,4 +36,3 @@ extension MovieDetailAPI: BaseAPI {
         return .requestParameters(parameters: param, encoding: URLEncoding.queryString)
     }
 }
-

@@ -37,7 +37,7 @@ where
     }
     
     func execute(request: Any?) -> Observable<HomesPageModel> {
-        return _remoteDataSource.execute(request: nil).map { self._mapper.transformEntityToDomain(entity:$0) }
+        return _remoteDataSource.execute(request: nil).map { self._mapper.transformEntityToDomain(entity: $0) }
     }
     
 }

@@ -26,6 +26,7 @@ target 'Core' do
   use_frameworks!
   pod 'RxCocoa', '5.1.1'
   pod 'Moya/RxSwift', '~> 14.0'
+  pod 'RealmSwift'
 end
 
 target 'Home' do
@@ -45,6 +46,14 @@ end
 target 'MovieDetail' do
   project 'MovieDetail/MovieDetail.project'
   use_frameworks! 
+  pod 'RxCocoa', '5.1.1'
+  pod 'Moya/RxSwift', '~> 14.0'
+  pod 'RealmSwift'
+end
+
+target 'MovieFavorite' do
+  project 'MovieFavorite/MovieFavorite.project'
+  use_frameworks!
   pod 'RxCocoa', '5.1.1'
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'RealmSwift'

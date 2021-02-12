@@ -20,8 +20,4 @@ public struct HomeRemoteDataSource: DataSource {
     public func execute(request: Any?) -> Observable<HomesResponse> {
         return self.provider.rx.request(.getMovies, HomesResponse.self)
     }
-    
-    
-    
-    
 }

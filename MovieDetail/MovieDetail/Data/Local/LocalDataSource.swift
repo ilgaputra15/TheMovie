@@ -11,9 +11,9 @@ import RxSwift
 import Core
 
 protocol LocaleDataSourceProtocol: class {
-    func addMovie(from movie: MovieDetailEntity) -> Observable<Bool>
+    func addMovie(from movie: MovieLocalEntity) -> Observable<Bool>
     func deleteMovie(from movieId: Int) -> Observable<Bool>
-    func getMovie(from movieId: Int) -> Observable<MovieDetailEntity?>
+    func getMovie(from movieId: Int) -> Observable<MovieLocalEntity?>
 }
 
 final class LocaleDataSource: NSObject {
@@ -30,7 +30,7 @@ final class LocaleDataSource: NSObject {
 }
 
 extension LocaleDataSource: LocaleDataSourceProtocol {
-    func addMovie(from movie: MovieDetailEntity) -> Observable<Bool> {
+    func addMovie(from movie: MovieLocalEntity) -> Observable<Bool> {
         return Observable<Bool>.create { observer in
           if let realm = self.realm {
             do {
@@ -55,7 +55,7 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
           if let realm = self.realm {
             do {
               try realm.write {
-                let objectsToDelete = realm.objects(MovieDetailEntity.self).filter("id == \(movieId)")
+                let objectsToDelete = realm.objects(MovieLocalEntity.self).filter("id == \(movieId)")
                 realm.delete(objectsToDelete)
                 observer.onNext(true)
                 observer.onCompleted()
@@ -71,10 +71,10 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
         }
     }
     
-    func getMovie(from movieId: Int) -> Observable<MovieDetailEntity?> {
-        return Observable<MovieDetailEntity?>.create { observer in
+    func getMovie(from movieId: Int) -> Observable<MovieLocalEntity?> {
+        return Observable<MovieLocalEntity?>.create { observer in
           if let realm = self.realm {
-            let movie = realm.objects(MovieDetailEntity.self).filter("id == \(movieId)").first
+            let movie = realm.objects(MovieLocalEntity.self).filter("id == \(movieId)").first
             observer.onNext(movie)
             observer.onCompleted()
           } else {
