@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteViewController" customModule="TheMovie" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="qBv-sC-7xY" id="3fA-7p-664"/>
+                <outlet property="descLabel" destination="jxa-4z-rtq" id="aVq-KX-Krf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qBv-sC-7xY">
+                    <rect key="frame" x="0.0" y="105" width="414" height="757"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7jC-6W-q7m">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meg-es-KS5">
+                    <rect key="frame" x="24" y="60" width="366" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-4z-rtq">
+                    <rect key="frame" x="137.5" y="438.5" width="139.5" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" name="Gray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qBv-sC-7xY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BKo-Dq-4tL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qBv-sC-7xY" secondAttribute="bottom" id="K7X-Yl-odB"/>
+                <constraint firstItem="meg-es-KS5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="SFT-rc-1BB"/>
+                <constraint firstItem="jxa-4z-rtq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="SW2-5o-q31"/>
+                <constraint firstItem="qBv-sC-7xY" firstAttribute="top" secondItem="meg-es-KS5" secondAttribute="bottom" constant="16" id="Sss-QY-C4o"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qBv-sC-7xY" secondAttribute="trailing" id="XVC-fa-TOb"/>
+                <constraint firstItem="meg-es-KS5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="a7I-Ew-iEF"/>
+                <constraint firstItem="jxa-4z-rtq" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="amK-NY-GM4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="meg-es-KS5" secondAttribute="trailing" constant="24" id="pvi-zI-AEt"/>
+            </constraints>
+            <point key="canvasLocation" x="-41" y="51"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Gray">
+            <color red="0.7686274509803922" green="0.7686274509803922" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
