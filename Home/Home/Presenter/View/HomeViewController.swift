@@ -19,6 +19,7 @@ public class HomeViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel: HomeViewModel<Interactor<Any, HomesPageModel, HomeRepository<HomeRemoteDataSource, HomeTransformer>>>!
     var disposeBag: DisposeBag!
@@ -30,6 +31,7 @@ public class HomeViewController: BaseViewController {
     }
     
     func setupView() {
+        iconImage.image = UIImage(named: "Icon")
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
         collectionView.register(
             UINib(

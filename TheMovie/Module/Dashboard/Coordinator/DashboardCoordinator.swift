@@ -10,6 +10,7 @@ import Home
 import MovieDetail
 import MovieSearch
 import MovieFavorite
+import Core
 
 class DashboardCoordinator: BaseCoordinator {
     

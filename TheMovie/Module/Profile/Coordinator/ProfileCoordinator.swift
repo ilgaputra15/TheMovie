@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Core
 
 class ProfileCoordinator: BaseCoordinator {
     func create(navigation: UINavigationController) -> UIViewController {
