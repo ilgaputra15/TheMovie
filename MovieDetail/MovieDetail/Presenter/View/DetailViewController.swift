@@ -22,7 +22,15 @@ public class DetailViewController: BaseViewController {
     @IBOutlet weak var labelOverview: UILabel!
     var disposeBag: DisposeBag!
     var viewModel: DetailViewModel!
-
+    
+    init() {
+        super.init(nibName: "DetailViewController", bundle: Bundle(for: DetailViewController.self))
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: false)

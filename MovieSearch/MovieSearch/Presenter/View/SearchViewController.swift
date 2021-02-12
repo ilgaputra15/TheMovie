@@ -20,6 +20,14 @@ class SearchViewController: BaseViewController {
     var disposeBag: DisposeBag!
     var viewModel: MovieSearchViewModel!
     
+    init() {
+        super.init(nibName: "SearchViewController", bundle: Bundle(for: SearchViewController.self))
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
