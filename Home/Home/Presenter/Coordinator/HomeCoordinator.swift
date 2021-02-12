@@ -14,8 +14,8 @@ public class HomeCoordinator: BaseCoordinator {
     var navTo: ((Int) -> Void)?
    
     public func create(navigation: UINavigationController, navTo: @escaping (Int) -> Void) -> UIViewController {
-        let interactor = Interactor(repository: HomeRepository(remoteDataSource: HomeRemoteDataSource(), mapper: HomeTransformer()))
-        let viewModel = HomeViewModel(homeUseCase: interactor, disposeBag: disposeBag)
+        let useCase = Injection().provideMovieUseCase()
+        let viewModel = HomeViewModel(homeUseCase: useCase, disposeBag: disposeBag)
         let viewController = HomeViewController()
         viewController.disposeBag = disposeBag
         viewController.viewModel = viewModel

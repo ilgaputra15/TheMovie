@@ -25,6 +25,7 @@
 		E52DDE7125B4905A00139DF0 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE7025B4905A00139DF0 /* HomeRepository.swift */; };
 		E52DDE7625B4907500139DF0 /* HomeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE7525B4907500139DF0 /* HomeRemoteDataSource.swift */; };
 		E52DDE7F25B491AD00139DF0 /* HomesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE7E25B491AD00139DF0 /* HomesResponse.swift */; };
+		E57D145F25D6F721009D1493 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D145E25D6F721009D1493 /* Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		E52DDE7025B4905A00139DF0 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		E52DDE7525B4907500139DF0 /* HomeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSource.swift; sourceTree = "<group>"; };
 		E52DDE7E25B491AD00139DF0 /* HomesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomesResponse.swift; sourceTree = "<group>"; };
+		E57D145E25D6F721009D1493 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		E52DDE0525B48AF500139DF0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E57D145D25D6F713009D1493 /* DI */,
 				E52DDE3A25B48CE600139DF0 /* Presenter */,
 				E52DDE3925B48CE000139DF0 /* Domain */,
 				E52DDE3825B48CDA00139DF0 /* Data */,
@@ -252,6 +255,14 @@
 				E52DDE7E25B491AD00139DF0 /* HomesResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		E57D145D25D6F713009D1493 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E57D145E25D6F721009D1493 /* Injection.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +404,7 @@
 			files = (
 				E52DDE7125B4905A00139DF0 /* HomeRepository.swift in Sources */,
 				E52DDE7625B4907500139DF0 /* HomeRemoteDataSource.swift in Sources */,
+				E57D145F25D6F721009D1493 /* Injection.swift in Sources */,
 				E52DDE6C25B48E7E00139DF0 /* MovieModel.swift in Sources */,
 				E5250EA025C94DFA0097CF53 /* HomeTransformer.swift in Sources */,
 				E52DDE7F25B491AD00139DF0 /* HomesResponse.swift in Sources */,
