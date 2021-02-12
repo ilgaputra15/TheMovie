@@ -7,6 +7,7 @@
 
 import UIKit
 import Home
+import MovieDetail
 
 class DashboardCoordinator: BaseCoordinator {
     
@@ -19,18 +20,28 @@ class DashboardCoordinator: BaseCoordinator {
     override func start() {
         let viewController = DashboardViewController()
         let nav = UINavigationController(rootViewController: viewController)
+        navigationController = nav
         viewController.viewControllers = tabViewControllers(navigation: nav)
         window.rootViewController = nav
         window.makeKeyAndVisible()
     }
     
     func tabViewControllers(navigation: UINavigationController) -> [UIViewController] {
-        let home = setupTab(vc: HomeCoordinator().create(navigation: navigation), imageName: UIImage(named: "Home"), tag: 1)
+        let homeVC = HomeCoordinator().create(navigation: navigation) { movieId in
+            self.navToMovieDetail(movieId: movieId)
+        }
+        let home = setupTab(vc: homeVC, imageName: UIImage(named: "Home"), tag: 1)
         let search = setupTab(vc: SearchCoordinator().create(navigation: navigation), imageName: UIImage(named: "Search"), tag: 2)
         let favorite = setupTab(vc: FavoriteCoodinator().create(navigation: navigation), imageName: UIImage(named: "Favorite"), tag: 3)
         let profile = setupTab(vc: ProfileCoordinator().create(navigation: navigation), imageName: UIImage(named: "Profile"), tag: 4)
         return [home, search, favorite, profile]
         
+    }
+    
+    func navToMovieDetail(movieId: Int) {
+        let detail = MovieDetailCoordinator(movieId: movieId)
+        detail.navigationController = navigationController
+        detail.start()
     }
     
     func setupTab(vc: UIViewController, imageName: UIImage?, tag: Int) -> UIViewController {

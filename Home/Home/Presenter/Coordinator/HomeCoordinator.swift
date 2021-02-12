@@ -10,13 +10,16 @@ import Core
 import RxSwift
 
 public class HomeCoordinator: BaseCoordinator {
+    
+    var navTo: ((Int) -> Void)?
    
-    public func create(navigation: UINavigationController) -> UIViewController {
+    public func create(navigation: UINavigationController, navTo: @escaping (Int) -> Void) -> UIViewController {
         let interactor = Interactor(repository: HomeRepository(remoteDataSource: HomeRemoteDataSource(), mapper: HomeTransformer()))
         let viewModel = HomeViewModel(homeUseCase: interactor, disposeBag: disposeBag)
         let viewController = HomeViewController()
         viewController.disposeBag = disposeBag
         viewController.viewModel = viewModel
+        self.navTo = navTo
         setupBinding(viewModel: viewModel)
         self.navigationController = navigation
         return viewController
@@ -27,6 +30,9 @@ public class HomeCoordinator: BaseCoordinator {
     }
     
     public func navigateToDetail(movieId: Int) {
+        if let navTo = navTo {
+            navTo(movieId)
+        }
 //        let detail = DetailCoordinator(movieId: movieId)
 //        detail.navigationController = navigationController
 //        detail.start()

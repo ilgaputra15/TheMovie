@@ -29,7 +29,7 @@ open class BaseCoordinator: Coordinator {
     public init() {
     }
 
-    public func start() {
+    open func start() {
         fatalError("Start method should be implemented.")
     }
 
