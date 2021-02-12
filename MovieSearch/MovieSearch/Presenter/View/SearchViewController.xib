@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -7,9 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="TheMovie" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="MovieSearch" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="jO4-1T-OCH" id="tOS-hh-NAn"/>
+                <outlet property="collectionView" destination="jO4-1T-OCH" id="TF3-nW-miu"/>
                 <outlet property="descLabel" destination="mdg-y1-qtp" id="dMl-VD-tTk"/>
                 <outlet property="loading" destination="Xvz-pu-mkQ" id="gf3-iN-TPN"/>
                 <outlet property="noResultLabel" destination="r67-tC-rv6" id="Q6O-0Q-3M0"/>
@@ -23,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDB-Hb-IGd">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="72"/>
                     <subviews>
                         <searchBar contentMode="redraw" placeholder="Iron Man" translatesAutoresizingMaskIntoConstraints="NO" id="5jL-q9-lTV">
                             <rect key="frame" x="8" y="8" width="398" height="56"/>
@@ -39,7 +40,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jO4-1T-OCH">
-                    <rect key="frame" x="0.0" y="72" width="414" height="824"/>
+                    <rect key="frame" x="0.0" y="116" width="414" height="746"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b7d-3f-kgi">
                         <size key="itemSize" width="128" height="128"/>
@@ -49,16 +50,16 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Xvz-pu-mkQ">
-                    <rect key="frame" x="197" y="474" width="20" height="20"/>
+                    <rect key="frame" x="197" y="479" width="20" height="20"/>
                 </activityIndicatorView>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r67-tC-rv6">
-                    <rect key="frame" x="24" y="471.5" width="366" height="25.5"/>
+                    <rect key="frame" x="24" y="476.5" width="366" height="25.5"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your movie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdg-y1-qtp">
-                    <rect key="frame" x="24" y="469.5" width="366" height="29"/>
+                    <rect key="frame" x="24" y="474.5" width="366" height="29"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                     <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>

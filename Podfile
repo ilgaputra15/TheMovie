@@ -35,6 +35,13 @@ target 'Home' do
   pod 'Moya/RxSwift', '~> 14.0'
 end
 
+target 'MovieSearch' do
+  project 'MovieSearch/MovieSearch.project'
+  use_frameworks!
+  pod 'RxCocoa', '5.1.1'
+  pod 'Moya/RxSwift', '~> 14.0'
+end
+
 target 'MovieDetail' do
   project 'MovieDetail/MovieDetail.project'
   use_frameworks! 

@@ -16,4 +16,7 @@
    <FileRef
       location = "group:MovieDetail/MovieDetail.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:MovieSearch/MovieSearch.xcodeproj">
+   </FileRef>
 </Workspace>
