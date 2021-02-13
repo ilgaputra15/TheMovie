@@ -6,7 +6,7 @@ use_frameworks!
 pod 'RealmSwift'
 pod 'RxCocoa', '5.1.1'
 pod 'Moya/RxSwift', '~> 14.0'
-pod 'Core', :git => 'https://github.com/ilgaputra15/TheMovie-Core.git'
+pod 'Core', :source => 'https://github.com/ilgaputra15/TheMovie-CorePodSpecs.git'
 
  
 workspace 'TheMovie'
