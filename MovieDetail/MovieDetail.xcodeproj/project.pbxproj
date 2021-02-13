@@ -12,8 +12,6 @@
 		E50E7CEE25CA908F00709C47 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E7CEC25CA908F00709C47 /* DetailViewController.swift */; };
 		E50E7CEF25CA908F00709C47 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50E7CED25CA908F00709C47 /* DetailViewController.xib */; };
 		E50E7CF625CA91CA00709C47 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E7CF525CA91CA00709C47 /* DetailCoordinator.swift */; };
-		E50E7CF925CA937100709C47 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50E7CF825CA937100709C47 /* Core.framework */; };
-		E50E7CFA25CA937100709C47 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E50E7CF825CA937100709C47 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E50E7CFD25CA9F7800709C47 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E7CFC25CA9F7800709C47 /* DetailViewModel.swift */; };
 		E50E7D0025CA9FC000709C47 /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E7CFF25CA9FC000709C47 /* MovieDetailModel.swift */; };
 		E50E7D0325CAA13300709C47 /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E7D0225CAA13300709C47 /* MovieDetailInteractor.swift */; };
@@ -25,20 +23,6 @@
 		E57D134A25D6654B009D1493 /* MovieDetailTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D134925D6654B009D1493 /* MovieDetailTransformer.swift */; };
 		E57D134D25D666D2009D1493 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D134C25D666D2009D1493 /* Injection.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		E50E7CFB25CA937100709C47 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E50E7CFA25CA937100709C47 /* Core.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1A89E620D936A3E97C2045BD /* Pods-MovieDetail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDetail.release.xcconfig"; path = "Target Support Files/Pods-MovieDetail/Pods-MovieDetail.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +53,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				48EE216B865D880E2514DCCC /* Pods_MovieDetail.framework in Frameworks */,
-				E50E7CF925CA937100709C47 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +253,6 @@
 				E50E7C9025CA8E8B00709C47 /* Sources */,
 				E50E7C9125CA8E8B00709C47 /* Frameworks */,
 				E50E7C9225CA8E8B00709C47 /* Resources */,
-				E50E7CFB25CA937100709C47 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

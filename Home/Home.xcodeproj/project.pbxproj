@@ -14,8 +14,6 @@
 		E52DDE0D25B48AF500139DF0 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52DDE0325B48AF500139DF0 /* Home.framework */; };
 		E52DDE1225B48AF500139DF0 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE1125B48AF500139DF0 /* HomeTests.swift */; };
 		E52DDE1425B48AF500139DF0 /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = E52DDE0625B48AF500139DF0 /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E52DDE3525B48BE300139DF0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52DDE3425B48BE300139DF0 /* Core.framework */; };
-		E52DDE3625B48BE300139DF0 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E52DDE3425B48BE300139DF0 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E52DDE4325B48D2200139DF0 /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52DDE3F25B48D2100139DF0 /* MovieViewCell.xib */; };
 		E52DDE4425B48D2200139DF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE4025B48D2100139DF0 /* HomeViewController.swift */; };
 		E52DDE4525B48D2200139DF0 /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DDE4125B48D2200139DF0 /* MovieViewCell.swift */; };
@@ -37,20 +35,6 @@
 			remoteInfo = Home;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		E52DDE3725B48BE300139DF0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				E52DDE3625B48BE300139DF0 /* Core.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4257A14F19C14A6E9E207458 /* Pods-Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.debug.xcconfig"; path = "Target Support Files/Pods-Home/Pods-Home.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,7 +68,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C5047DA7C9F9E749639C01 /* Pods_Home.framework in Frameworks */,
-				E52DDE3525B48BE300139DF0 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +271,6 @@
 				E52DDDFF25B48AF500139DF0 /* Sources */,
 				E52DDE0025B48AF500139DF0 /* Frameworks */,
 				E52DDE0125B48AF500139DF0 /* Resources */,
-				E52DDE3725B48BE300139DF0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

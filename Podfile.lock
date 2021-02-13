@@ -1,5 +1,9 @@
 PODS:
   - Alamofire (5.4.0)
+  - Core (0.0.2):
+    - Moya/RxSwift (~> 14.0)
+    - RealmSwift
+    - RxCocoa (= 5.1.1)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
@@ -19,6 +23,7 @@ PODS:
   - SwiftLint (0.40.3)
 
 DEPENDENCIES:
+  - Core (from `https://github.com/ilgaputra15/TheMovie-Core.git`)
   - Moya/RxSwift (~> 14.0)
   - RealmSwift
   - RxCocoa (= 5.1.1)
@@ -35,8 +40,18 @@ SPEC REPOS:
     - RxSwift
     - SwiftLint
 
+EXTERNAL SOURCES:
+  Core:
+    :git: https://github.com/ilgaputra15/TheMovie-Core.git
+
+CHECKOUT OPTIONS:
+  Core:
+    :commit: 42c9a125f05ab1a6059f02408be149e5fd88b1ac
+    :git: https://github.com/ilgaputra15/TheMovie-Core.git
+
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  Core: 1632082063a87dc81354e60becbc947ef43004f2
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Realm: 80f4fb2971ccb9adc27a47d0955ae8e533a7030b
   RealmSwift: 0e566ca714edb377bba8ea0811eafcea0b93734e
@@ -45,6 +60,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
 
-PODFILE CHECKSUM: bfd4cd06bb58893f2282683499fae060b0b9bec6
+PODFILE CHECKSUM: a9b303cef5a039218db3b6824843750ad6375f37
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

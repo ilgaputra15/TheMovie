@@ -2,13 +2,11 @@
 # platform :ios, '9.0'
 
 use_frameworks!
+
+#source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/ilgaputra15/TheMovie-CorePodSpecs'
  
 workspace 'TheMovie'
-
-def shared
-    use_frameworks!
-    pod 'RealmSwift'
-end
 
 target 'TheMovie' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -17,16 +15,9 @@ target 'TheMovie' do
   pod 'RxCocoa', '5.1.1'
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'RealmSwift'
+  pod 'Core', :git => 'https://github.com/ilgaputra15/TheMovie-Core.git'
   
   # Pods for TheMovie
-end
-
-target 'Core' do
-  project 'Core/Core.project'
-  use_frameworks!
-  pod 'RxCocoa', '5.1.1'
-  pod 'Moya/RxSwift', '~> 14.0'
-  pod 'RealmSwift'
 end
 
 target 'Home' do
@@ -34,6 +25,7 @@ target 'Home' do
   use_frameworks!
   pod 'RxCocoa', '5.1.1'
   pod 'Moya/RxSwift', '~> 14.0'
+  pod 'Core', :git => 'https://github.com/ilgaputra15/TheMovie-Core.git'
 end
 
 target 'MovieSearch' do
@@ -41,6 +33,7 @@ target 'MovieSearch' do
   use_frameworks!
   pod 'RxCocoa', '5.1.1'
   pod 'Moya/RxSwift', '~> 14.0'
+  pod 'Core', :git => 'https://github.com/ilgaputra15/TheMovie-Core.git'
 end
 
 target 'MovieDetail' do
@@ -49,6 +42,7 @@ target 'MovieDetail' do
   pod 'RxCocoa', '5.1.1'
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'RealmSwift'
+  pod 'Core', :git => 'https://github.com/ilgaputra15/TheMovie-Core.git'
 end
 
 target 'MovieFavorite' do
@@ -57,5 +51,6 @@ target 'MovieFavorite' do
   pod 'RxCocoa', '5.1.1'
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'RealmSwift'
+  pod 'Core', :git => 'https://github.com/ilgaputra15/TheMovie-Core.git'
 end
 
